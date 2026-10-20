@@ -1,0 +1,50 @@
+{
+  "concept": "One day at the harbor in the order it happened: dawn, cargo work, the crew, shift change, sunset. Rousing music until the ship is alongside, calm after it.",
+  "title": {
+    "lines": ["Harbor Example", "One day at the harbor", "Un día en el puerto"],
+    "date_line": "Spring 2026"
+  },
+  "music": {"parts": [
+    {"track": "Example Theme", "credit": "\"Example Theme\" by Example Composer", "end_music_t": 98.0, "to_shot": 5, "offset": 1.0, "xfade": 2.0},
+    {"track": "Calm Theme", "credit": "\"Calm Theme\" by Another Composer", "end_music_t": 150.0, "gain_db": 1.5}
+  ]},
+  "sections": [
+    {"key": "work", "lines": ["Morning · Cargo work", "Mañana · Operaciones de carga"]},
+    {"key": "crew", "lines": ["The crew", "La tripulación"]},
+    {"key": "shift", "lines": ["Noon · Shift change", "Mediodía · Cambio de turno"]},
+    {"key": "dusk", "lines": ["Evening · Sunset", "Tarde · Atardecer"]}
+  ],
+  "shots": [
+    {"n": 1, "file": "dawn/aerial_harbor.mp4", "in_s": 12.0, "out_s": 16.0, "speed": 0.5,
+     "transition_in": "fadein_from_black", "transition_s": 0,
+     "grade": "curves=master='0/0 0.25/0.23 0.75/0.77 1/1',vibrance=intensity=0.15",
+     "grade_prev": "eq=contrast=1.04:saturation=1.07",
+     "desc": "59.94p aerial over the harbor at first light, title over it"},
+    {"n": 2, "file": "cargo/crane_wide.mp4", "in_s": 30.0, "out_s": 37.0, "speed": 1.0,
+     "transition_in": "dissolve", "transition_s": 1.0, "caption_section": "work",
+     "desc": "a gantry crane lifts a container, fixed wide"},
+    {"n": 3, "file": "cargo/quay_walk_handheld.mp4", "in_s": 40.0, "out_s": 46.0, "speed": 1.0,
+     "transition_in": "dissolve", "transition_s": 0.6, "stab": {"smooth_s": 2.0, "max_zoom": 1.08},
+     "tag": {"lines": ["Quay 2", "Muelle 2"]},
+     "desc": "handheld walk along the quay, stabilised"},
+    {"n": 4, "file": "photos/crew_briefing.jpg", "still": true, "dur_s": 3.6,
+     "kb": {"from": [0.5, 0.45, 1.0], "to": [0.5, 0.42, 1.08]},
+     "transition_in": "dissolve", "transition_s": 0.7, "caption_section": "crew",
+     "desc": "morning briefing on the quay, everyone in hard hats; crop keeps all faces"},
+    {"n": 5, "file": "cargo/ship_alongside.mp4", "in_s": 5.0, "out_s": 11.0, "speed": 1.0,
+     "transition_in": "dissolve", "transition_s": 0.6,
+     "tag": {"lines": ["MV EXAMPLE ONE alongside", "MV EXAMPLE ONE atracado"]},
+     "desc": "last line made fast; the music turns calm here; 6 s so the tag clears before the fade through black"},
+    {"n": 6, "file": "shift/gate_bell.mp4", "in_s": 10.0, "out_s": 18.0, "speed": 1.0,
+     "transition_in": "fadeblack", "transition_s": 1.2, "caption_section": "shift", "source_audio": true,
+     "desc": "crews swap at the gate; the shift bell rings 2-4 s into the shot"},
+    {"n": 7, "file": "dusk/berth_wide.mp4", "in_s": 2.0, "out_s": 7.0, "speed": 0.5,
+     "transition_in": "fadeblack", "transition_s": 1.2, "caption_section": "dusk",
+     "desc": "59.94p high wide of the berths at sunset, chapter caption over it"},
+    {"n": 8, "file": "dusk/berth_lights.mp4", "in_s": 3.0, "out_s": 12.0, "speed": 1.0,
+     "transition_in": "dissolve", "transition_s": 1.0,
+     "desc": "the quay lights come on under the last of the sky, closing statement over the sky"}
+  ],
+  "closing": {"on_shot": 8, "offset": 1.5, "lines": ["Another day at Harbor Example", "Otro día en Harbor Example"], "rule_after": 1},
+  "endcard": {"line1": "Harbor Example", "line2": "Example City · 2026"}
+}

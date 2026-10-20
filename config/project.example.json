@@ -1,0 +1,32 @@
+{
+  "name": "harbor_day",
+  "library_dir": "~/Footage/HarborExample",
+  "output_dir": "..",
+  "build_dir": ".",
+  "scratch_dir": "../_cache",
+  "fonts": {
+    "latin": "/System/Library/Fonts/Supplemental/Arial.ttf",
+    "latin_bold": "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+    "cjk": "",
+    "cjk_index_regular": 0,
+    "cjk_index_bold": 0
+  },
+  "colors": {"navy": "#181C24", "blue": "#346068", "accent": "#DCB040"},
+  "logos": [],
+  "cards": {"title_logo_h": 140, "end_logo_h": 200},
+  "music": {
+    "dir": "~/Music/licensed",
+    "tracks": {"Example Theme": "example_theme.mp3", "Calm Theme": "calm_theme.mp3"},
+    "credit_template": "Music: {track}\nLicensed under Creative Commons: By Attribution 4.0\nhttps://creativecommons.org/licenses/by/4.0/"
+  },
+  "credit_file_name": "music_credit_Rev{rev}.txt",
+  "send_limit_mb": 500,
+  "master": {"width": 3840, "height": 2160, "crf": 17, "fps": "30000/1001", "preset": "medium", "level": "5.1", "maxrate": "60M", "bufsize": "90M"},
+  "send": {"height": 1080, "bitrates": ["16M", "13M", "10M"], "maxrate": "20M", "bufsize": "30M", "level": "4.1"},
+  "loudness": {"I": -15, "TP": -1.5, "LRA": 11, "aac_headroom_db": 0.5},
+  "source_audio": {"peak_dbfs": -9, "duck": 0.4, "highpass_hz": 100},
+  "labels": {"master": "master{height}p", "send": "send{height}p", "draft": "draft"},
+  "default_grade": "eq=contrast=1.04:saturation=1.07",
+  "timing": {"title_in": 1.0, "title_out": 7.5, "caption_s": 4.2, "endcard_s": 6.0, "endcard_xfade": 1.2, "fade_in": 1.2, "fade_out": 1.5},
+  "segment_codec": null
+}

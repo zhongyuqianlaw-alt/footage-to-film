@@ -41,7 +41,7 @@ Everything specific to one film lives in a local `project.json` + `edl.json` tha
 ## Install
 
 ```bash
-git clone <this repository's URL> ~/.claude/skills/footage-to-film
+git clone https://github.com/zhongyuqianlaw-alt/footage-to-film.git ~/.claude/skills/footage-to-film
 python3 -m venv ~/.venvs/footage-to-film
 ~/.venvs/footage-to-film/bin/pip install -r ~/.claude/skills/footage-to-film/requirements.txt
 PYTHON=~/.venvs/footage-to-film/bin/python ~/.claude/skills/footage-to-film/scripts/selftest.sh   # ~1 minute
